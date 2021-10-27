@@ -1,5 +1,5 @@
 pipeline{
-	agent { label 'maven' }
+	agent any
 	stages{
 		stage('clone git repo'){
 			steps{
@@ -11,10 +11,6 @@ pipeline{
 				echo 'second stage'
 			}
 		}
-		stage('maven build - package '){
-			steps{
-				echo 'third stage'
-			}
-		}
+		
 	}
 }
